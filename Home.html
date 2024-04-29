@@ -1,156 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>User Profile Page</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2460ed1eda.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Ensure that the container takes at least the full height of the viewport */
+        }
 
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure that the container takes at least the full height of the viewport */
-}
-.container {
-    flex: 1; /* Allow the container to grow and occupy remaining space */
-    width: 30%;
-    margin: 0 auto;
-    padding: 20px;
-}
+        .container {
+            flex: 1;
+            /* Allow the container to grow and occupy remaining space */
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-.profile h1 {
-    margin-right: 10px;
-}
+        .profile h1 {
+            margin-right: 10px;
+            font-style: italic;
+            color: rgb(81, 13, 144);
+        }
 
-.profile img{
-    margin-left: 280px;
-}
+        .profile img {
+            margin-left: 280px;
+        }
 
-.options {
-    display: flex;
-    flex-direction: column; /* Change to column layout */
-}
+        .options {
+            display: flex;
+            flex-direction: column;
+            /* Change to column layout */
+        }
 
-.item {
-    display: flex; /* Display items in a flexbox */
-    align-items: center; /* Align items vertically */
-    width:100% ;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5%;
-    background-color: peachpuff;
-}
+        .item {
+            display: flex;
+            /* Display items in a flexbox */
+            align-items: center;
+            /* Align items vertically */
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgb(237, 236, 243);
+        }
 
-.item p{
-    margin-left: 30px;
-}
-
-
-.item img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    margin-left: 60px;
-}
-
-.navigation {
-    position: fixed;
-    bottom: 0; /* Push the navigation bar to the bottom */
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    right:39% ;
-}
-
-.navigation a {
-  
-    text-decoration: none;
-    color: #333;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 1px solid white;
-    border-radius: 5px;
-}
+        .item p {
+            margin-left: 30px;
+            font-style: italic;
+            color: rgb(81, 13, 144);
+            font-weight: bold;
+        }
 
 
-@media (max-width: 767px) {
-    .container {
-    width: 60%;
-}
+        .item img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+            margin-left: 60px;
+        }
 
-    .profile img{
-    margin-left: 150px;
-}
+        .navigation {
+            position: fixed;
+            bottom: 0;
+            /* Push the navigation bar to the bottom */
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            right: 39%;
+        }
+
+        .navigation a {
+
+            text-decoration: none;
+            color: rgb(81, 13, 144);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
 
 
-.navigation {
-    width: 100%;
-    left: 0;
-}
+        @media (max-width: 767px) {
+            .container {
+                width: 60%;
+            }
 
-.navigation a {
-  
-  text-decoration: none;
-  color: #333;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-}
+            .profile img {
+                margin-left: 150px;
+            }
 
-</style>
+
+            .navigation {
+                width: 100%;
+                left: 0;
+            }
+
+            .navigation a {
+
+                text-decoration: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
-    <section class="profile">
-        <h1>Sara</h1>
-        <img src="./images/profile.png" alt="Icon Image">
-    </section>
-    
-    <section class="options">
-        <div class="item">
-           <p>Your Diet Chart</p>  <img src="./images/diet.png" alt="Diet Chart">
-           
-        </div>
-        <div class="item">
-          <p>Medical History</p>  <img src="./images/medical.svg" alt="Medical History">
-            
-        </div>
-        <div class="item">
-           <p>Lab Results</p> <img src="./images/lab.png" alt="Lab Results">
-            
-        </div>
-        <div class="item">
-           <p>Online Chats</p>  <img src="./images/chat.png" alt="Online Chats">
-           
-        </div>
-    </section>
-    
-    <nav class="navigation">
-        <a href="Home.html"><img src="./images/home.png" alt=""></a>
-        <a href="#"><img src="./images/bar.png" alt=""></a>
-        <a href="notification.html"><img src="./images/bell.png" alt=""></a>
-        <a href="settings.html"><img src="./images/settings.png" alt=""></a>
-    </nav>
-</div>
+    <div class="container">
+        <section class="profile">
+            <h1>Hi Julia!</h1>
+            <img src="./images/profile.png" alt="Icon Image">
+        </section>
+
+        <section class="options">
+            <div class="item">
+                <p>Your Diet Chart</p> <img src="./images/diet.png" alt="Diet Chart">
+
+            </div>
+            <div class="item">
+                <p>Medical History</p> <img src="./images/medical.svg" alt="Medical History">
+
+            </div>
+            <div class="item">
+                <p>Lab Results</p> <img src="./images/lab.png" alt="Lab Results">
+
+            </div>
+            <div class="item">
+                <p>Online Chats</p> <img src="./images/chat.png" alt="Online Chats">
+
+            </div>
+        </section>
+
+        <nav class="navigation">
+            <a href="Home.html"><i class="fa-solid fa-house"></i></a>
+            <a href="medicalhistory.html"><i class="fa-solid fa-chart-simple"></i></a>
+            <a href="notification.html"><i class="fa fa-fw fa-bell"></i></a>
+            <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
+        </nav>
+    </div>
 
 </body>
+
 </html>
 
