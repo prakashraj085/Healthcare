@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Self Care</title>
+   <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    margin-left: 35%;
+    border: 2px solid sandybrown;
+}
+
+h1 {
+    color: black;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 25px;
+   margin-top: 0px;
+}
+
+h1 img {
+    width: 80px;
+    height: 80px;
+    margin-left: 120px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin-bottom: 30px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: black;
+    border-color: black;
+    background-color: gray;
+   border-radius: 10px;
+   width: 100%;
+   display: flex;
+}
+
+.menu-item img {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+
+/* Add more styles as needed */
+.navbar {
+  overflow: hidden;
+  background-color: wheat;
+  position: fixed;
+  bottom: 0;
+  width: 27%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>Hi Sara</strong><img  src="./images/profile.png" alt="User Avatar"></h1>
+        
+        <div class="menu">
+            <div class="menu-item">
+               Your Diet Chart  <img src="./images/diet.png" alt="Diet Chart Icon">
+               
+            </div>
+            <div class="menu-item">
+                Medical History <img src="./images/medical.svg" alt="Medical History Icon">
+               
+            </div>
+            <div class="menu-item">
+               Lab Results <img src="./images/lab.png" alt="Lab Results Icon">
+                
+            </div>
+            <div class="menu-item">
+               Online Chat <img src="./images/chat.png" alt="Online Chat Icon">
+                
+            </div>
+        </div>
+
+        <div class="navbar">
+            <a href="#"> Home</a>
+            <a href="#"> Search</a>
+            <a href="notification.html"> Favorites</a>
+            <a href="#">Profile</a>
+        </div>
+    </div>
+
+    <!-- Include JS file -->
+    <script src='script.js'></script> 
+</body>
+</html>

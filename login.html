@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Self Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+    background-color:white;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    margin-left: 35%;
+    border: 2px solid #333366; 
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 50px;
+}
+
+img {
+    height: 25%;
+    margin-bottom: 40px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.rounded-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #333366;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#loginBtn {
+    margin-right: 0;
+}
+
+#signUpBtn:hover,
+#loginBtn:hover {
+    cursor: pointer;
+    background-color: #333366;
+    color: white;
+}
+
+p{
+    color: lightblue;
+}
+
+@media (max-width: 767px) {
+    .container {
+        height: 100%;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    h1 {
+        color: darkblue;
+        margin-top: 0;
+        align-items: start;
+        text-align:justify;
+        padding: 0%;
+    }
+
+    img {
+        height: 25%;
+       
+    }
+
+    input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom:0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    .rounded-button {
+
+    margin-top: 0;
+    margin-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px
+}
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to<br><strong><center>HEMS</center></strong></h1>
+        <img src="./images/doctor-svgrepo-com.svg" alt="Character Image">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="#">Forgot Password?</a>
+        <button id="loginBtn" class="rounded-button">Login in</button>
+        <p>Don't have an account? <a href="signup.html">signup</a></p>
+    </div>
+
+    <!-- Include JS file -->
+   <script >
+            // Add your JavaScript functionality here
+document.getElementById('loginBtn').addEventListener('click', function() {
+    window.location.href = "Home.html";
+});
+
+    </script> 
+</body>
+ 
+</html>
