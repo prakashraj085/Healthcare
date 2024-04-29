@@ -20,9 +20,8 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 30%;
-    margin-left: 35%;
-    border: 2px solid #333366; 
+    width: 100%;
+    margin-right: 100px;
 }
 
 h1 {
@@ -36,9 +35,9 @@ img {
 }
 
 input {
-    width: 80%;
+    width: 40%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -79,40 +78,38 @@ p{
 }
 
 @media (max-width: 767px) {
+
     .container {
-        height: 100%;
-        width: 60%;
-        margin-left: 20%;
-    }
-
-    h1 {
-        color: darkblue;
-        margin-top: 0;
-        align-items: start;
-        text-align:justify;
-        padding: 0%;
-    }
-
-    img {
-        height: 25%;
-       
-    }
-
-    input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom:0px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-right:50px;
+    position: absolute;
+    top: -130px;
 }
 
-    .rounded-button {
+input {
+    width: 50%;
+}
 
-    margin-top: 0;
+.rounded-button {
+
     margin-right: 10px;
-    padding-left: 30px;
-    padding-right: 30px
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
+img {
+    height: 10%;
+   
+}
+
+#Forgot {
+
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+
+
+  
 }
 
     </style>
@@ -124,7 +121,7 @@ p{
         <input type="text" placeholder="Full Name">
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password">
-        <a href="#">Forgot Password?</a>
+        <a id="Forgot"  href="#">Forgot Password?</a>
         <button id="signUpBtn" class="rounded-button">Sign Up</button>
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
@@ -140,3 +137,4 @@ document.getElementById('signUpBtn').addEventListener('click', function() {
 </body>
  
 </html>
+
