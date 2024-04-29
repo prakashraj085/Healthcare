@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <style>
+    <script src="https://kit.fontawesome.com/2460ed1eda.js" crossorigin="anonymous"></script>
+
+    <style>
         /* Your existing styles go here */
         body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: white;
-}
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: white;
+        }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
 
-h1 {
-    font-size: x-large;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-right: 500px;
-    margin-bottom: 50px;
-    
-}
+        h1 {
+            font-size: x-large;
+            color: rgb(81, 13, 144);
+            margin-bottom: 20px;
+            text-align: center;
+            margin-right: 500px;
+            margin-bottom: 50px;
+            font-style: italic;
+            font-weight: bold;
 
-.profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        }
 
-.profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-.user-info {
-    font-size: 16px;
-    color: #666;
-}
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
-}
+        .user-info {
+            font-size: 16px;
+            color: #666;
+        }
 
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    /* Add border around menu items */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px; /* Round the corners */
-    width: 100%;
-    padding-right: 100px;
-    position: relative;
-}
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
 
-.menu a:after {
-    content: ">";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size:larger;
-    color: black;
-    font-weight: bolder;
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            /* Add border around menu items */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            /* Round the corners */
+            width: 100%;
+            padding-right: 100px;
+            position: relative;
+            font-style: italic;
+            color: rgb(81, 13, 144);
+        }
 
-
-}
-
-.menu i {
-    margin-right: 10px;
-}
-
-.navigation {
-    position: fixed;
-    bottom: 0; /* Push the navigation bar to the bottom */
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    right:39% ;
-}
-
-.navigation a {
-  
-    text-decoration: none;
-    color: #333;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 5px;
-}
-
-@media (max-width: 767px) {
-    h1 {
-    text-align: center;
-    margin-right: 250px;
-}
-
-.menu a {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 80%;
-    padding-right: 100px;
-    position: relative;
-}
-
-.navigation {
-    width: 100%;
-    left: 0;
-}
-
-.navigation a {
-  
-  text-decoration: none;
-  color: #333;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 5px;
-}
-}
+        .menu a:after {
+            content: ">";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: larger;
+            color: rgb(81, 13, 144);
+            font-weight: bolder;
 
 
-     </style>
+        }
+
+        .menu i {
+            margin-right: 10px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 0;
+            /* Push the navigation bar to the bottom */
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            right: 39%;
+        }
+
+        .navigation a {
+
+            text-decoration: none;
+            color: rgb(81, 13, 144);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                text-align: center;
+                margin-right: 250px;
+            }
+
+            .menu a {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 80%;
+                padding-right: 100px;
+                position: relative;
+
+            }
+
+            .navigation {
+                width: 100%;
+                left: 0;
+            }
+
+            .navigation a {
+
+                text-decoration: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                border-radius: 5px;
+            }
+        }
+    </style>
 
 </head>
+
 <body>
     <div class="container">
         <h1>Settings</h1>
         <div class="profile">
-            <img src="./images/profile.png" alt="User Avatar">
+            <img src="./images/profile2.png" alt="User Avatar">
             <div class="user-info">
-                <p>Julia Mario</p>
-                <p>juliamario@mail.com</p>
+                <p style="color:  rgb(81, 13, 144); font-weight: bold;">Julia Mario</p>
+                <p style="color:  rgb(94, 78, 109); ">juliamario@mail.com</p>
             </div>
         </div>
         <div class="menu">
@@ -166,12 +174,13 @@ h1 {
         </div>
 
         <nav class="navigation">
-            <a href="Home.html"><img src="./images/home.png" alt=""></a>
-            <a href="#"><img src="./images/bar.png" alt=""></a>
-            <a href="notification.html"><img src="./images/bell.png" alt=""></a>
-            <a href="settings.html"><img src="./images/settings.png" alt=""></a>
+            <a href="Home.html"><i class="fa-solid fa-house"></i></a>
+            <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+            <a href="notification.html"><i class="fa fa-fw fa-bell"></i></a>
+            <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
         </nav>
     </div>
 </body>
+
 </html>
 
