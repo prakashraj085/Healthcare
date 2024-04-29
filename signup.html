@@ -1,140 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Self Care</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body, html {
-    height: 100%;
-    margin: 0;
-    background-color:white;
-    padding: 0;
-    overflow-x: hidden;
-}
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: white;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin-right: 100px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            margin-right: 100px;
+        }
 
-h1 {
-    color: darkblue;
-    margin-bottom: 50px;
-}
+        h1 {
+            color: darkblue;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
 
-img {
-    height: 25%;
-    margin-bottom: 40px;
-}
+        img {
+            height: 25%;
+            margin-bottom: 40px;
+        }
 
-input {
-    width: 40%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        input {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-a {
-    color: darkblue;
-    text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
+        input::placeholder {
+            color: rgb(146, 146, 255);
+        }
 
-.rounded-button {
-    background-color: white;
-    color: black;
-    border: 2px solid #333366;
-    border-radius: 10px;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
+        a {
+            color: darkblue;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
 
-#loginBtn {
-    margin-right: 0;
-}
+        .rounded-button {
+            background-color: white;
+            color: black;
+            border: 2px solid #333366;
+            border-radius: 10px;
+            padding: 15px;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
 
-#signUpBtn:hover,
-#loginBtn:hover {
-    cursor: pointer;
-    background-color: #333366;
-    color: white;
-}
+        #loginBtn {
+            margin-right: 0;
+        }
 
-p{
-    color: lightskyblue;
-}
+        #signUpBtn:hover,
+        #loginBtn:hover {
+            cursor: pointer;
+            background-color: rgb(81, 13, 144);
+            ;
+            color: white;
+        }
 
-@media (max-width: 767px) {
+        p {
+            color: rgb(146, 146, 255);
+        }
 
-    .container {
-    margin-right:50px;
-    position: absolute;
-    top: -100px;
-}
+        @media (max-width: 767px) {
 
-input {
-    width: 50%;
-}
+            .container {
+                margin-right: 50px;
+                position: absolute;
+                top: -100px;
+            }
 
-.rounded-button {
+            input {
+                width: 50%;
+            }
 
-    margin-right: 10px;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
+            .rounded-button {
 
-img {
-    height: 10%;
-   
-}
+                margin-right: 10px;
+                padding: 10px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
 
-#Forgot {
+            img {
+                height: 10%;
 
-    margin-bottom: 5px;
-    margin-left: 100px;
-}
+            }
+
+            #Forgot {
+
+                margin-bottom: 5px;
+                margin-left: 100px;
+            }
 
 
-  
-}
 
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Welcome to<br><strong><center>HEMS</center></strong></h1>
+        <h1> <small>Welcome to</small> <br>
+            <center style="font-size: larger;">HEMS</center>
+        </h1>
         <img src="./images/doctor-svgrepo-com.svg" alt="Character Image">
         <input type="text" placeholder="Full Name">
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password">
-        <a id="Forgot"  href="#">Forgot Password?</a>
+        <a id="Forgot" href="#">Forgot Password?</a>
         <button id="signUpBtn" class="rounded-button">Sign Up</button>
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
 
     <!-- Include JS file -->
-   <script >
-            // Add your JavaScript functionality here
-document.getElementById('signUpBtn').addEventListener('click', function() {
-    window.location.href = "login.html";
-});
+    <script>
+        // Add your JavaScript functionality here
+        document.getElementById('signUpBtn').addEventListener('click', function () {
+            window.location.href = "login.html";
+        });
 
-    </script> 
+    </script>
 </body>
- 
+
 </html>
 
