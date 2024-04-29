@@ -1,124 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>User Profile Page</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2460ed1eda.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Ensure that the container takes at least the full height of the viewport */
+        }
 
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure that the container takes at least the full height of the viewport */
-}
-.container {
-    flex: 1; /* Allow the container to grow and occupy remaining space */
-    width: 30%;
-    margin: 0 auto;
-    padding: 20px;
-}
+        .container {
+            flex: 1;
+            /* Allow the container to grow and occupy remaining space */
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-h1{
-    text-align: center;
-    margin-right: 350px;
-    margin-bottom: 200px;
-}
+        h1 {
+            text-align: center;
+            margin-right: 350px;
+            margin-bottom: 200px;
+            font-style: italic;
+            color: rgb(81, 13, 144);
+        }
 
-.content {
-    display: flex;
-    flex-direction: column; /* Stack the image and message vertically */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    margin-top: 20px;
-}
+        .content {
+            display: flex;
+            flex-direction: column;
+            /* Stack the image and message vertically */
+            justify-content: center;
+            /* Horizontally center the content */
+            align-items: center;
+            /* Vertically center the content */
+            margin-top: 20px;
+        }
 
-.content img {
-   width: 70%;
-   height: 70%;
-}
+        .content img {
+            width: 70%;
+            height: 70%;
+        }
 
-.message {
-    text-align: center;
-    font-style: italic;
-    font-size: larger;
-}
+        .message {
+            text-align: center;
+            font-style: italic;
+            font-size: larger;
+        }
 
-.navigation {
-    position: fixed;
-    bottom: 0; /* Push the navigation bar to the bottom */
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    right:39% ;
-}
+        .navigation {
+            position: fixed;
+            bottom: 0;
+            /* Push the navigation bar to the bottom */
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            right: 39%;
+        }
 
-.navigation a {
-  
-    text-decoration: none;
-    color: #333;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 1px solid white;
-    border-radius: 5px;
-}
+        .navigation a {
 
-
-
-@media (max-width: 767px) {
-    .container {
-    width: 60%;
-}
-
-h1{
-    text-align: center;
-    margin-left: -70px;
-}
+            text-decoration: none;
+            color: rgb(81, 13, 144);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
 
 
-.navigation {
-    width: 100%;
-    left: 0;
-}
 
-.navigation a {
-  
-  text-decoration: none;
-  color: #333;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-}
+        @media (max-width: 767px) {
+            .container {
+                width: 60%;
+            }
 
-</style>
+            h1 {
+                text-align: center;
+                margin-left: -70px;
+            }
+
+
+            .navigation {
+                width: 100%;
+                left: 0;
+            }
+
+            .navigation a {
+
+                text-decoration: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Notification</h1>
+    <div class="container">
+        <h1>Notification</h1>
 
-    <section class="content">
-       <img src="images/notification.png" alt="Notification Image">
-       <p class="message">You don't have any notification.</p>
-   </section>
- 
-    
-    <nav class="navigation">
-        <a href="Home.html"><img src="./images/home.png" alt=""></a>
-        <a href="#"><img src="./images/bar.png" alt=""></a>
-        <a href="notification.html"><img src="./images/bell.png" alt=""></a>
-        <a href="settings.html"><img src="./images/settings.png" alt=""></a>
-    </nav>
-</div>
+        <section class="content">
+            <img src="images/notification.png" alt="Notification Image">
+            <p class="message">You don't have any notification.</p>
+        </section>
+
+
+        <nav class="navigation">
+            <a href="Home.html"><i class="fa-solid fa-house"></i></a>
+            <a href="medicalhistory.html"><i class="fa-solid fa-chart-simple"></i></a>
+            <a href="notification.html"><i class="fa fa-fw fa-bell"></i></a>
+            <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
+        </nav>
+    </div>
 
 </body>
+
 </html>
 
