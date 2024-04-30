@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Carousel</title>
+<style>
+    .carousel {
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+    }
+    .carousel-item {
+        flex: 0 0 auto;
+        width: 300px; /* Same as carousel width */
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .radio-group {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .radio-btn {
+        display: none;
+    }
+    .radio-btn + label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #888;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+    .radio-btn:checked + label {
+        background-color: #333;
+    }
+    .quote-section {
+        margin-top: 10px;
+        text-align: center;
+        font-style: italic;
+        font-weight: bolder;
+        font-size: xx-large;
+        color:rgb(81, 13, 144);
+    }
+    .quote {
+        display: none;
+    }
+    .quote.active {
+        display: block;
+    }
+
+    p{
+      color: rgb(146, 146, 255);
+      font-size: small;
+      font-style: italic;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img src="./images/image1.png" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img style="margin-top: 100px;" src="./images/image2.png" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/image3.png" alt="Image 3">
+        </div>
+    </div>
+</div>
+
+<div class="radio-group">
+    <input type="radio" name="carousel-radio" id="radio1" class="radio-btn" checked>
+    <label for="radio1"></label>
+    <input type="radio" name="carousel-radio" id="radio2" class="radio-btn">
+    <label for="radio2"></label>
+    <input type="radio" name="carousel-radio" id="radio3" class="radio-btn">
+    <label for="radio3"></label>
+</div>
+
+<div class="quote-section">
+    <div class="quote active">Discover Top Doctors</div>
+    <div class="quote">Ask a Doctor Online</div>
+    <div class="quote">Get Expert Advice</div>
+</div>
+
+<p><a style="text-decoration: none;" href="loginsignup.html">Skip Tour</a></p>
+
+<script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const radios = document.querySelectorAll('.radio-btn');
+    const quotes = document.querySelectorAll('.quote');
+    const totalItems = carouselInner.children.length;
+    const itemWidth = carouselInner.children[0].offsetWidth;
+    let currentIndex = 0;
+    let isDragging = false;
+    let startPosition = 0;
+
+    function showItem(index) {
+        if (index < 0 || index >= totalItems) return;
+        carouselInner.style.transform = `translateX(-${index * itemWidth}px)`;
+        currentIndex = index;
+        radios[currentIndex].checked = true;
+        quotes.forEach((quote, i) => {
+            if (i === currentIndex) {
+                quote.classList.add('active');
+            } else {
+                quote.classList.remove('active');
+            }
+        });
+    }
+
+    document.querySelectorAll('.carousel-item').forEach((item, index) => {
+        item.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startPosition = e.clientX;
+        });
+
+        item.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startPosition = e.touches[0].clientX;
+        });
+
+        item.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        item.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
+        item.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const currentPosition = e.clientX;
+                const distance = startPosition - currentPosition;
+                if (distance > 50) {
+                    showItem((currentIndex + 1) % totalItems);
+                    isDragging = false;
+                } else if (distance < -50) {
+                    const nextIndex = currentIndex === 0 ? totalItems - 1 : currentIndex - 1;
+                    showItem(nextIndex);
+                    isDragging = false;
+                }
+            }
+        });
+
+        item.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                const currentPosition = e.touches[0].clientX;
+                const distance = startPosition - currentPosition;
+                if (distance > 50) {
+                    showItem((currentIndex + 1) % totalItems);
+                    isDragging = false;
+                } else if (distance < -50) {
+                    const nextIndex = currentIndex === 0 ? totalItems - 1 : currentIndex - 1;
+                    showItem(nextIndex);
+                    isDragging = false;
+                }
+            }
+        });
+    });
+
+    radios.forEach((radio, index) => {
+        radio.addEventListener('click', () => {
+            showItem(index);
+        });
+    });
+</script>
+
+</body>
+</html>
